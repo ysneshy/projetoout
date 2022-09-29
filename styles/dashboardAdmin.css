@@ -1,0 +1,206 @@
+.section-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 50px 0;
+}
+
+.section-list li{
+    background-color: var(--bg);
+    padding: 20px 12px;
+    border-radius: var(--border-radius);
+    color: var(--black);
+    font-size: var(--text1);
+}
+
+.section-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.section-btns a{
+    text-decoration: none;
+    color: var(--black);
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: var(--text1);
+    font-weight: var(--wheight2);
+    padding: 10px;
+    background-color: var(--green);
+    border-radius: var(--border-radius);
+}
+
+.content-section{
+    width: 85%;
+    margin: 20px auto;
+    height: 550px;
+    overflow-y: auto;
+}
+
+#empresas{
+    position: relative;
+    top: -763px;
+    visibility: hidden;
+}
+
+#suas-empresas{
+    position: relative;
+    top: -568px;
+    background-color: var(--white);
+    visibility: hidden;
+}
+
+#list-suas-empresas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista__empresa{
+    background-color: var(--bg);
+    padding: 10px;
+    color: var(--black);
+    border-radius: var(--border-radius);
+}
+
+.lista__empresa h4{
+    font-weight: var(--wheight2);
+    font-size: var(--title2);
+}
+
+.lista__empresa p{
+    font-weight: var(--wheight2);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.lista__empresa ul {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.lista__empresa ul li{
+    padding: 10px;
+    width: 100px;
+    background-color: var(--white);
+    text-align: center;
+    border-radius: var(--border-radius);
+    border: var(--black) 1.5px solid;
+}
+
+#pesquisa-nome{
+    margin-bottom: 30px;
+}
+
+#pesquisa-secao{
+    margin-bottom: 45px;
+}
+
+#pesquisar{
+    position: relative;
+    top: -1140px;
+    visibility: hidden;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+#departamentos{
+    position: relative;
+    top: -1523px;
+}
+
+#departamentos .section-btns{
+    overflow-x: auto;
+}
+
+#departamentos .section-btns::-webkit-scrollbar{
+    height: 5px;
+}
+
+.search-result{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.search-result li{
+    background-color: #1c1c1c44;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: var(--black);
+}
+
+.search-result li p{
+    font-size: var(--text2);
+    margin-top: 5px;
+}
+
+#contratar{
+    margin-bottom: 20px;
+}
+
+#list-departs{
+    position: relative;
+    top: -570px;
+    visibility: hidden;
+}
+
+#workers-of-department{
+    position: relative;
+    top: -1140px;
+    visibility: hidden;
+}
+
+#contratar-demitir{
+    position: relative;
+    top: -1710px;
+    visibility: hidden;
+}
+
+#edith-worker-info{
+    position: relative;
+    top: -2280px;
+    visibility: hidden;
+}
+
+#available-workers{
+    position: relative;
+    top: -2850px;
+    visibility: hidden;
+}
+
+.search-result.carrossel{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.search-result.carrossel::-webkit-scrollbar{
+    height: 5px;
+}
+
+#editar{
+    margin-bottom: 20px;
+}
+
+#editar-departamento{
+    position: relative;
+    top: -3421px;
+    visibility: hidden;
+}
+
+#excluir-departamento{
+    position: relative;
+    top: -3990px;
+    visibility: hidden;
+}

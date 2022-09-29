@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/generalStyles.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <header class="menu-itens">
+        <div id="container_menu">
+            <h1 class="menu-itens__logo">WorkStation</h1>
+            <nav class="menu-itens__btns">
+                <button class="menu-itens__btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+                <div class="container-btns">
+                    <a target="self" href="/">Empresa</a>
+                    <a target="self" href="/">Departamento</a>
+                    <a target="self" href="/">Perfil</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section" id="empresa">
+            <h2 class="title">Informações da empresa: </h2>
+            <ul class="render-result" id="infos-empresa">
+
+            </ul>
+        </section>
+        <section class="section" id="departamento">
+            <h2 class="title">Informações do seu departamento: </h2>
+            <ul id="infos-depart" class="render-result">
+
+            </ul>
+        </section>
+        <section class="section" id="info-usuario">
+            <h2 class="title">Seu perfil: </h2>
+            <h3 class="title2">Suas informações: </h3>
+            <ul id="user-info" class="render-result">
+
+            </ul>
+            <h3 class="title2">Editar informações:</h3>
+            <form id="edit-form" class="empresas__form">
+                <input class="input" type="text" placeholder="Novo nome de usuário">
+                <input class="input" type="email" placeholder="Novo email">
+                <input class="input" type="password" placeholder="Nova senha">
+                <button class="button">Editar Informações</button>
+            </form>
+        </section>
+        <span class="dark-theme-toggle checked"></span>
+        <span class="btn-sair">Sair</span>
+    </main>
+    <script type="module" src="../scripts/dashboard.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

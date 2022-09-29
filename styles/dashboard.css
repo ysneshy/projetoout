@@ -1,0 +1,57 @@
+#departamento{
+    position: relative;
+    top: -750px;
+    visibility: hidden;
+}
+
+#info-usuario{
+    position: relative;
+    top: -1500px;
+    visibility: hidden;
+}
+
+#info-usuario h3{
+    margin-top: 20px;
+}
+
+#edit-form{
+    margin-top: 40px;
+}
+
+.render-result{
+    background-color: var(--bg);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+}
+
+.render-result li{
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.render-result li h3 {
+    font-weight: var(--wheight1);
+    font-size: var(--title2);
+}
+
+.render-result li ul {
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: var(--text2);
+}
+
+.render-result li ul h4 {
+    font-size: var(--text1);
+    font-weight: var(--wheight2);
+}
+
+#user-info h3{
+    margin-top: 0;
+}

@@ -1,0 +1,92 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px 20px;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    height: 500px;
+}
+
+.form-section__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+.section__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section__span{
+    font-size: var(--text2);
+    align-self: center;
+    padding: 20px;
+    color: var(--black);
+}
+
+.button_redirect{
+    background-color: var(--white);
+    padding: 11px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--black);
+    font-size: var(--text1);
+    font-weight: var(--wheight2);
+    color: var(--black);
+    background-color: var(--input);
+    cursor: pointer;
+}
+
+#cadastro-section{
+    visibility: hidden;
+    position: relative;
+    top: -580px;
+}
+
+#empresas{
+    height: 500px;
+    position: relative;
+    top: -1160px;
+    visibility: hidden;
+}
+
+.list-empresas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    margin-top: 25px;
+}
+
+.list-empresas::-webkit-scrollbar{
+    width: 10px;
+}
+
+.list-empresas__item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--bg);
+    padding: 12px;
+    border-radius: var(--border-radius);
+}
+
+.list-empresas__item h2{
+    color: var(--black);
+    font-size: var(--text1);
+    font-weight: var(--wheight1);
+    margin-bottom: 5px;
+}
+
+.list-empresas__item p{
+    color: var(--black);
+    font-size: var(--text2);
+}
+
+

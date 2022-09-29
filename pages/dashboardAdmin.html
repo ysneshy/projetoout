@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/generalStyles.css">
+    <link rel="stylesheet" href="../styles/dashboardAdmin.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <header class="menu-itens">
+        <div id="container_menu">
+            <h1 class="menu-itens__logo">WorkStation</h1>
+            <nav class="menu-itens__btns">
+                <button class="menu-itens__btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+                <div class="container-btns">
+                    <a target="self" href="/">Setores</a>
+                    <a target="self" href="/">Empresas</a>
+                    <a target="self" href="/">Departamentos</a>   
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section" id="setores">
+            <h2 class="title">Setores</h2>
+            <ul class="section-list">
+                <!--                 
+                <li>
+                    <h3>Setor</h3>
+                </li>
+                 -->
+            </ul>
+        </section>
+        <section class="section" id="empresas">
+            <h2 class="title">Empresas</h2>
+            <nav class="section-btns" id="btns-empresa">
+                <a target="self" href="/">Criar</a>
+                <a target="self" href="/">Suas Empresas</a>
+                <a target="self" href="/">Pesquisar</a>
+            </nav>
+            <div id="empresas-criar" class="content-section">
+                <h3 class="title2">Criar uma Empresa</h3>
+                <form class="empresas__form" id="criar-empresa">
+                    <input class="input" type="text" required placeholder="Nome da empresa">
+                    <input class="input" type="text" required placeholder="Horário de abertura (00:00)">
+                    <input class="input" type="text" required placeholder="Descrição das atividade">
+                    <select class="input" id="render-options">
+                        <option value="" disabled selected>Setor: </option>
+                    </select>
+                    <button class="button">Enviar</button>
+                </form>
+            </div>
+            <div id="suas-empresas" class="content-section">
+                <h3 class="title2">Suas empresas</h3>
+                <ul id="list-suas-empresas">
+                    <!-- 
+                    <li class="lista__empresa">
+                        <h4>empresa</h4>
+                        <p>Departamentos: </p>
+                        <ul>
+                            <li>
+                                <h5>departamento</h5>
+                            </li>
+                        </ul>
+                        <p>horario de funcionamento: </p>
+                        <P>Ramo da atividade: SETOR</P>
+                    </li> 
+                    -->
+                </ul>
+            </div>
+            <div id="pesquisar" class="content-section">
+                <h3 class="title2">Pesquisar empresas por nome ou setor</h3>
+                <form id="pesquisa-nome" class="empresas__form">
+                    <input class="input" type="text" placeholder="Pesquisar empresa por nome">
+                    <button class="button">Pesquisar</button>
+                </form>
+                <form id="pesquisa-secao" class="empresas__form">
+                    <select class="input" id="render-search-options">
+                        <option value="" disabled selected>Pesquisar por setor: </option>
+                    </select>
+                    <button class="button">Pesquisar</button>
+                </form>
+                <ul class="result">
+                    
+                </ul>
+            </div>
+        </section>
+        <section class="section" id="departamentos">
+            <h2 class="title">Departamentos</h2>
+            <nav class="section-btns" id="btns-departamentos">
+                <a target="self" href="/">Criar</a>
+                <a target="self" href="/">Editar</a>
+                <a target="self" href="/">Excluir</a>
+                <a target="self" href="/">Departamentos</a>
+                <a target="self" href="/">Funcionários</a>
+                <a target="self" href="/">Contratos</a>
+                <a target="self" href="/">Alterações</a>
+                <a target="self" href="/">Disponíveis</a>
+            </nav>
+            <div id="criar-depart" class="content-section">
+                <h3 class="title2">Criar novo departamento</h3>  
+                <form id="criar-departamento" class="empresas__form">
+                    <input class="input" type="text" placeholder="Nome do departamento">
+                    <input class="input" type="text" placeholder="Descrição das atividades">
+                    <select class="input">
+                        <option value="" disabled selected>Empresa: </option>
+                    </select>
+                    <button class="button">Criar</button>
+                </form>
+            </div>
+            <div id="list-departs" class="content-section">
+                <h3 class="title2">Listar os departamentos de uma empresa</h3>
+                <form id="select-depart" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Empresa: </option>
+                    </select>
+                    <button class="button">Buscar</button>
+                </form>
+                <ul id="result-departments" class="search-result">
+
+                </ul>
+            </div>
+            <div id="workers-of-department" class="content-section">
+                <h3 class="title2">Listar os funcionários de um departamento</h3>
+                <form id="departs-of-company" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Departamento: </option>
+                    </select>
+                    <button class="button">Buscar</button>
+                </form>
+                <ul id="department-workers" class="search-result carrossel">
+
+                </ul>
+            </div>
+            <div id="contratar-demitir" class="content-section">
+                <h3 class="title2">Contatar funcionário:</h3>
+                <form id="contratar" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Usuário: </option>
+                    </select>
+                    <select class="input">
+                        <option value="" disabled selected>Departamento: </option>
+                    </select>
+                    <button class="button">Contratar</button>
+                </form>
+                <h3 class="title2">Demitir funcionário:</h3>
+                <form id="demitir" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Usuário: </option>
+                    </select>
+                    <button class="button">Demitir</button>
+                </form>
+            </div>
+            <div id="edith-worker-info" class="content-section">
+                <h3 class="title2">Editar informações do funcionário:</h3>
+                <form id="editar" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Usuário: </option>
+                    </select>
+                    <select class="input">
+                        <option value="" disabled selected>Modalidade: </option>
+                        <option value="presencial">Presencial</option>
+                        <option value="home office">Home Office</option>
+                        <option value="hibrido">Híbrido</option>
+                    </select>
+                    <select class="input">
+                        <option value="" disabled selected>Senioridade: </option>
+                        <option value="estágio">Estágio</option>
+                        <option value="júnior">Júnior</option>
+                        <option value="pleno">Pleno</option>
+                        <option value="sênior">Sênior</option>
+                    </select>
+                    <button class="button">Editar</button>
+                </form>
+                <h3 class="title2">Deletar funcionário:</h3>
+                <form id="deletar" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Usuário: </option>
+                    </select>
+                    <button class="button">Deletar</button>
+                </form>
+            </div>
+            <div id="available-workers" class="content-section">
+                <h3 class="title2">Usuários disponíveis para contratação:</h3>
+                <ul class="search-result carrossel">
+
+                </ul>
+            </div>
+            <div id="editar-departamento" class="content-section">
+                <h3 class="title2">Editar departamento</h3>
+                <form id="editar-depart" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Departamento: </option>
+                    </select>
+                    <input class="input" placeholder="Nova descrição das atividades">
+                    <button class="button">Editar</button>
+                </form>
+            </div>
+            <div id="excluir-departamento" class="content-section">
+                <h3 class="title2">Excluir departamento</h3>
+                <form id="deletar-depart" class="empresas__form">
+                    <select class="input">
+                        <option value="" disabled selected>Departamento: </option>
+                    </select>
+                    <button class="button">Deletar</button>
+                </form>
+            </div>
+        </section>
+        <span class="dark-theme-toggle checked"></span>
+        <span class="btn-sair">Sair</span>
+    </main>
+    <script type="module" src="../scripts/dashboardAdmin.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

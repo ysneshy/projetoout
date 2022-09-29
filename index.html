@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/generalStyles.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <header class="menu-itens">
+        <div id="container_menu">
+            <h1 class="menu-itens__logo">WorkStation</h1>
+            <nav class="menu-itens__btns">
+                <button class="menu-itens__btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+                <div class="container-btns">
+                    <a target="self" href="/">Login</a>
+                    <a target="self" href="/">Cadastro</a>
+                    <a target="self" href="/">Empresas</a>   
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div id="login-section" class="section">
+            <div class="form-section__header">
+                <h2 class="title">Login</h2>
+            </div>
+            <form id="login" class="section__form">
+                <input class="input" placeholder="Seu e-mail" type="email" required>
+                <input class="input" placeholder="Sua senha" type="password" required>
+                <button id="btn-login" class="button" type="submit">Logar</button>
+            </form>
+            <span class="section__span">Ainda não possui cadastro?</span>
+            <button class="button_redirect">Ir para página de registro</button>
+        </div>
+        <div id="cadastro-section" class="section">
+            <div class="form-section__header">
+                <h2 class="title">Cadastro</h2>
+            </div>
+            <form id="cadastro" class="section__form">
+                <input class="input" placeholder="Nome de usuário" type="text" required>
+                <input class="input" placeholder="E-mail" type="email" required>
+                <select class="input">
+                    <option value="" disabled selected>Senioridade: </option>
+                    <option value="estágio">Estágio</option>
+                    <option value="júnior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="sênior">Sênior</option>
+                </select>
+                <input class="input" placeholder="Sua senha" type="password" required>
+                <button id="btn-cadastro" class="button" type="submit">Registrar</button>
+            </form>
+            <span class="section__span">Já possui login?</span>
+            <button class="button_redirect">Ir para página de login</button>
+        </div>
+        <div id="empresas" class="section">
+            <div class="form-section__header">
+                <h2 class="title">Empresas Cadastradas</h2>
+            </div>
+            <form id="setores-empresas" class="section__form">
+                <select id="empresas-cadastradas" name="empresas-cadastradas" class="input">
+                    <option value="" disabled selected>Setores</option>
+                </select>
+                <button id="btn-empresas" class="button">Filtrar</button>
+            </form>
+            <ul class="list-empresas">
+                <!-- 
+                <li class="list-empresas__item">
+                    <h2>Nome</h2>
+                    <p>descrição: </p>
+                    <p>abre as: </p>
+                    <p>setor: </p>
+                </li> 
+                -->
+            </ul>
+        </div>
+        <span class="dark-theme-toggle checked"></span>
+    </main>
+    <script type="module" src="./scripts/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
